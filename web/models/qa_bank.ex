@@ -14,6 +14,6 @@ defmodule Drills.QABank do
   def changeset(struct, params \\ %{}) do
     struct
     |> cast(params, [:question, :answer])
-    |> validate_required([:question, :answer])
+    # |> validate_required([:question, :answer])
   end
 end

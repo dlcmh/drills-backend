@@ -1,4 +1,4 @@
-<h2>New qa bank</h2>
+<h2>New QA</h2>
 
 <%= render "form.html", changeset: @changeset,
                         action: qa_bank_path(@conn, :create) %>

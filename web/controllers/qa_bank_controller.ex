@@ -44,7 +44,7 @@ defmodule Drills.QABankController do
     case Repo.update(changeset) do
       {:ok, qa_bank} ->
         conn
-        |> put_flash(:info, "Qa bank updated successfully.")
+        |> put_flash(:info, "QA updated successfully.")
         |> redirect(to: qa_bank_path(conn, :show, qa_bank))
       {:error, changeset} ->
         render(conn, "edit.html", qa_bank: qa_bank, changeset: changeset)
@@ -59,7 +59,7 @@ defmodule Drills.QABankController do
     Repo.delete!(qa_bank)
 
     conn
-    |> put_flash(:info, "Qa bank deleted successfully.")
+    |> put_flash(:info, "QA deleted successfully.")
     |> redirect(to: qa_bank_path(conn, :index))
   end
 end

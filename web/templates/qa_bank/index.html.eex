@@ -1,4 +1,4 @@
-<h2>Listing qa bank</h2>
+<h2>Listing QA Bank</h2>
 
 <table class="table">
   <thead>
@@ -25,4 +25,4 @@
   </tbody>
 </table>
 
-<%= link "New qa bank", to: qa_bank_path(@conn, :new) %>
+<%= link "New QA", to: qa_bank_path(@conn, :new) %>
