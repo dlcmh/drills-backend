@@ -1,0 +1,18 @@
+<h2>Show qa bank</h2>
+
+<ul>
+
+  <li>
+    <strong>Question:</strong>
+    <%= @qa_bank.question %>
+  </li>
+
+  <li>
+    <strong>Answer:</strong>
+    <%= @qa_bank.answer %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: qa_bank_path(@conn, :edit, @qa_bank) %>
+<%= link "Back", to: qa_bank_path(@conn, :index) %>

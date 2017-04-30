@@ -1,0 +1,28 @@
+<h2>Listing qa bank</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Question</th>
+      <th>Answer</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for qa_bank <- @qa_bank do %>
+    <tr>
+      <td><%= qa_bank.question %></td>
+      <td><%= qa_bank.answer %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: qa_bank_path(@conn, :show, qa_bank), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: qa_bank_path(@conn, :edit, qa_bank), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: qa_bank_path(@conn, :delete, qa_bank), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New qa bank", to: qa_bank_path(@conn, :new) %>

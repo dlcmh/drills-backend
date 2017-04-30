@@ -1,0 +1,6 @@
+<h2>New qa bank</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: qa_bank_path(@conn, :create) %>
+
+<%= link "Back", to: qa_bank_path(@conn, :index) %>
