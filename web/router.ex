@@ -2,7 +2,8 @@ defmodule Drills.Router do
   use Drills.Web, :router
 
   pipeline :browser do
-    plug :accepts, ["html"]
+    # plug :accepts, ["html"]
+    plug :accepts, ["html", "text"]
     plug :fetch_session
     plug :fetch_flash
     plug :protect_from_forgery
@@ -22,7 +23,9 @@ defmodule Drills.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", Drills do
-  #   pipe_through :api
-  # end
+  scope "/api", Drills do
+    pipe_through :api
+
+    resources "/qa_bank", QABankController, only: [:index]
+  end
 end

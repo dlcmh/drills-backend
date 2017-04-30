@@ -5,7 +5,8 @@ defmodule Drills.QABankController do
 
   def index(conn, _params) do
     qa_bank = Repo.all(QABank)
-    render(conn, "index.html", qa_bank: qa_bank)
+    # render(conn, "index.html", qa_bank: qa_bank)
+    render(conn, :index, qa_bank: qa_bank)
   end
 
   def new(conn, _params) do
