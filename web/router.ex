@@ -26,6 +26,6 @@ defmodule Drills.Router do
   scope "/api", Drills do
     pipe_through :api
 
-    resources "/qa_bank", QABankController, only: [:index]
+    resources "/qa_bank", QABankController, except: [:new, :edit]
   end
 end
