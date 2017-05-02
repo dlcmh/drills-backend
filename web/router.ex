@@ -20,6 +20,7 @@ defmodule Drills.Router do
     get "/", PageController, :index
     resources "/users", UserController
     resources "/qa_bank", QABankController
+    resources "/text_sandboxes", TextSandboxController
   end
 
   # Other scopes may use custom stacks.

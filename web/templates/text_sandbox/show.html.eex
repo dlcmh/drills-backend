@@ -1,0 +1,18 @@
+<h2>Show text sandbox</h2>
+
+<ul>
+
+  <li>
+    <strong>Raw:</strong>
+    <%= @text_sandbox.raw %>
+  </li>
+
+  <li>
+    <strong>Parsed:</strong>
+    <%= @text_sandbox.parsed %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: text_sandbox_path(@conn, :edit, @text_sandbox) %>
+<%= link "Back", to: text_sandbox_path(@conn, :index) %>

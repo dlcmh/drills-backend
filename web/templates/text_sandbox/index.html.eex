@@ -1,0 +1,28 @@
+<h2>Listing text sandboxes</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Raw</th>
+      <th>Parsed</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for text_sandbox <- @text_sandboxes do %>
+    <tr>
+      <td><%= text_sandbox.raw %></td>
+      <td><%= text_sandbox.parsed %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: text_sandbox_path(@conn, :show, text_sandbox), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: text_sandbox_path(@conn, :edit, text_sandbox), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: text_sandbox_path(@conn, :delete, text_sandbox), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New text sandbox", to: text_sandbox_path(@conn, :new) %>
